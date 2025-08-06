@@ -47,9 +47,27 @@ Claude Code agents provide specialized expertise for specific development tasks:
 | **🕵️ Investigator**     | Analyzes codebases and identifies issues                                      | (Custom analysis tools)             |
 | **📋 Code Flow Mapper** | Maps and analyzes code flow patterns                                          | (Flow analysis tools)               |
 
+### Agent Orchestration
+
+The `/task_medium` command serves as the primary orchestrator for complex development tasks, coordinating multiple sub-agents in a structured workflow:
+
+**4-Step Process:**
+
+1. **Investigation Phase** - Invokes `@investigator` subagent to analyze the codebase and generate `INVESTIGATION_REPORT.md`
+2. **Flow Analysis** - Triggers `@code-flow-mapper` to create `FLOW_REPORT.md` mapping code patterns and dependencies
+3. **Planning Phase** - Executes `@planner` subagent to synthesize both reports into a comprehensive `PLAN.md`
+4. **Plan Review** - Enters plan mode to present the generated plan for user approval or adjustments
+
+**Key Features:**
+
+- **Sequential Thinking Integration** - Leverages sequential-thinking MCP for deep reasoning
+- **Edge Case Consideration** - Emphasizes comprehensive problem analysis
+- **Best Practices Enforcement** - Prevents bandaid fixes through thorough planning
+- **Workspace Isolation** - Works with `task_medium_prep_hook.py` to create dedicated `claude-instance-{id}` directories
+
 ### Agent Usage
 
-Agents are invoked using the `@agent-name` syntax and automatically:
+Individual agents can also be invoked using the `@agent-name` syntax and automatically:
 
 - Read investigation and flow reports
 - Create detailed plans in `PLAN.md` files
