@@ -2,6 +2,30 @@
 
 This repository contains a comprehensive Claude Code configuration setup for an AI-powered development workflow. It includes custom agents, slash commands, hooks, and Model Context Protocol (MCP) servers to enhance productivity and maintain coding standards.
 
+## 🔧 Configuration Files Structure
+
+```
+.claude/
+├── settings.json          # Claude Code settings
+├── CLAUDE.md             # Personal AI guidelines
+├── JIRA.md               # Jira ticket templates
+├── agents/               # Specialized AI agents
+│   ├── planner.md
+│   ├── code-reviewer.md
+│   ├── investigator.md
+│   └── code-flow-mapper.md
+├── commands/             # Slash commands
+│   ├── brainstorm.md
+│   ├── commit.md
+│   ├── code-review.md
+│   └── [12 more commands]
+├── hooks/                # Event-driven automation
+│   └── task_medium_prep_hook.py
+└── docs/                 # Development standards
+    ├── python.md
+    └── source-control.md
+```
+
 ## 🏗️ Configuration Overview
 
 ### MCP Servers (.claude.json)
@@ -122,20 +146,6 @@ Streamlined development workflows through custom commands:
 - Error handling and directory validation
 - Workspace isolation for different task instances
 
-## 📚 Documentation Standards
-
-### Python Development (`docs/python.md`)
-
-- **Package Manager**: UV exclusively (no pip, poetry, easy_install)
-- **Project Structure**: pyproject.toml required in root
-- **Initialization**: `uv init` for new projects
-
-### Source Control (`docs/source-control.md`)
-
-- Git workflow standards
-- Branching strategies
-- Commit message conventions
-
 ## 🚀 Getting Started
 
 1. **Clone and Setup**:
@@ -158,30 +168,6 @@ Streamlined development workflows through custom commands:
 4. **Use Agents and Commands**:
    - Type `@agent-name` to invoke specialized agents
    - Use `/command-name` for quick development workflows
-
-## 🔧 Configuration Files Structure
-
-```
-.claude/
-├── settings.json          # Claude Code settings
-├── CLAUDE.md             # Personal AI guidelines
-├── JIRA.md               # Jira ticket templates
-├── agents/               # Specialized AI agents
-│   ├── planner.md
-│   ├── code-reviewer.md
-│   ├── investigator.md
-│   └── code-flow-mapper.md
-├── commands/             # Slash commands
-│   ├── brainstorm.md
-│   ├── commit.md
-│   ├── code-review.md
-│   └── [12 more commands]
-├── hooks/                # Event-driven automation
-│   └── task_medium_prep_hook.py
-└── docs/                 # Development standards
-    ├── python.md
-    └── source-control.md
-```
 
 ## 🔄 Complete Task Management Workflow
 
