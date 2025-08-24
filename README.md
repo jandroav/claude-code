@@ -2,6 +2,36 @@
 
 This repository contains a comprehensive Claude Code configuration setup for an AI-powered development workflow. It includes custom agents, slash commands, hooks, and Model Context Protocol (MCP) servers to enhance productivity and maintain coding standards.
 
+## 📚 Table of Contents
+
+- [Configuration Files Structure](#-configuration-files-structure)
+- [Configuration Overview](#-configuration-overview)
+  - [MCP Servers (.claude.json)](#mcp-servers-claudejson)
+  - [Personal Guidelines (CLAUDE.md)](#personal-guidelines-claudemd)
+  - [Jira Integration (JIRA.md)](#jira-integration-jiramd)
+- [Sub-Agents](#-sub-agents)
+  - [Agent Orchestration](#agent-orchestration)
+  - [Agent Usage](#agent-usage)
+- [Slash Commands](#-slash-commands)
+  - [Planning & Analysis](#-planning--analysis)
+  - [Development Workflow](#-development-workflow)
+  - [Project Management](#-project-management)
+  - [Project Completion](#-project-completion)
+- [Hooks](#-hooks)
+- [Getting Started](#-getting-started)
+- [Complete Task Management Workflow](#-complete-task-management-workflow)
+  - [The 3-Command Sequence](#the-3-command-sequence)
+  - [Workflow Benefits](#workflow-benefits)
+  - [Example Usage Flow](#example-usage-flow)
+- [Alternative Simplified Planning Workflow](#-alternative-simplified-planning-workflow)
+  - [The Alternative 3-Command Sequence](#the-alternative-3-command-sequence)
+  - [When to Use This Workflow](#when-to-use-this-workflow)
+  - [Alternative Workflow Benefits](#alternative-workflow-benefits)
+  - [Workflow Comparison](#workflow-comparison)
+- [Workflow Examples](#-workflow-examples)
+- [Obsidian Daily Productivity Framework](obsidian/README.md)
+- [Contributing](#-contributing)
+
 ## 🔧 Configuration Files Structure
 
 ```
