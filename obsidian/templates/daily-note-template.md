@@ -1,6 +1,6 @@
 ## 🎯 Today's intention
 
-## 📅 Today's calendar events
+## 📅 Today's calendar events & reminders
 
 ## 🔧 Systems focus
 

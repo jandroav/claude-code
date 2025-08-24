@@ -32,10 +32,10 @@ This framework consists of two main workflows:
 1. **Trigger**: Launch via Raycast command "Claude Daily Note"
 2. **Process**:
 
-   - Fetches today's calendar events from macOS Calendar
+   - Fetches today's calendar events and reminders from macOS Calendar
    - Prompts for daily intentions and focus areas
    - Creates a new daily note in Obsidian with format `YYYY-MM-DD. Daily Note.md`
-   - Adds mentioned events to your Home calendar
+   - Adds mentioned events to your calendar
    - Opens the note in Obsidian
 
 3. **Voice-Driven**: Designed for voice input to quickly capture intentions. You can use [SuperWhisper](https://superwhisper.com)
@@ -58,9 +58,9 @@ Each daily note follows this structure:
 
 [Your main focus/goal for the day]
 
-## 📅 Today's calendar events
+## 📅 Today's calendar events & reminders
 
-[Automatically populated from calendar + checkbox format]
+[Automatically populated from calendar and reminders + checkbox format]
 
 ## 🔧 Systems focus
 
@@ -104,11 +104,18 @@ Each daily note follows this structure:
    - Open Obsidian URLs
    - Access Jira via MCP server
 
-3. **Calendar Setup**: Ensure you have a "Home" calendar in macOS Calendar app
+3. **Calendar Setup**: Check [the customization section](#-customization)
 
-4. **Apple Shortcut**: Install the "Calendar/Reminders for Today" shortcut:
+4. **Apple Shortcut**: Install and configure the "Calendar/Reminders for Today" shortcut:
    - [Calendar/Reminders for Today Shortcut](https://www.icloud.com/shortcuts/19ff2b29e44343c4b12f7e32cb365c1d)
    - Grant permissions for Reminders and Calendar access when prompted
+   - **Important**: Edit the shortcut to select which calendars and reminder lists to include:
+     - Open the Shortcuts app
+     - Find "Calendar/Reminders for Today" shortcut
+     - Tap "Edit"
+     - Configure the "Find Calendar Events" action to select your desired calendars
+     - Configure the "Find Reminders" action to select your desired reminder lists
+     - Save the changes
 
 ## 🎮 Usage
 
@@ -133,6 +140,24 @@ Each daily note follows this structure:
 
 ## 🔧 Customization
 
+### Configuring Calendar and Reminder Sources
+
+The Apple Shortcut "Calendar/Reminders for Today" needs to be customized for your specific setup:
+
+1. **Calendar Selection**:
+
+   - Edit the "Find Calendar Events" action in the shortcut
+   - Choose which calendars you want included (Work, Personal, etc.)
+   - You can select multiple calendars
+
+2. **Reminder List Selection**:
+
+   - Edit the "Find Reminders" action in the shortcut
+   - Choose which reminder lists to scan (Today, Work Tasks, etc.)
+   - You can select multiple reminder lists
+
+3. **Testing**: Run the shortcut manually to verify it returns the events and reminders you expect
+
 ### Modifying the Template
 
 Edit `templates/daily-note-template.md` to change the daily note structure.
@@ -156,24 +181,3 @@ The framework uses:
 - **Raycast security model** for script execution
 - **Claude MCP** for secure Jira integration
 - **macOS AppleScript** for calendar and application integration
-
-## 🤝 Contributing
-
-To extend this framework:
-
-1. Add new commands in the `commands/` directory
-2. Create corresponding Raycast scripts in `raycast/`
-3. Update permissions in `settings.local.json` as needed
-4. Document new workflows in this README
-
-## 📝 Notes
-
-- Designed for voice-first interaction
-- Integrates seamlessly with existing productivity workflows
-- Automatically handles date formatting and file naming
-- Preserves authentic voice and doesn't over-prompt for missing information
-- Works entirely offline except for Jira integration
-
----
-
-_This framework turns daily planning and standup reporting into a seamless, voice-driven experience that fits naturally into your existing productivity stack._
